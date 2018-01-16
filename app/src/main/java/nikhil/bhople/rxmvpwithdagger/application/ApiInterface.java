@@ -3,7 +3,7 @@ package nikhil.bhople.rxmvpwithdagger.application;
 import java.util.HashMap;
 
 import io.reactivex.Observable;
-import nikhil.bhople.rxmvpwithdagger.activities.mvp.Result;
+import nikhil.bhople.rxmvpwithdagger.activities.mvp.ext.RecipeModel;
 import retrofit2.http.GET;
 import retrofit2.http.QueryMap;
 
@@ -13,6 +13,6 @@ import retrofit2.http.QueryMap;
 
 public interface ApiInterface {
 
-    @GET("login?")
-    Observable<Result> getRecipeList(@QueryMap HashMap<String,String> params);
+    @GET("/api")
+    Observable<RecipeModel> getRecipeList(@QueryMap HashMap<String,String> params);
 }

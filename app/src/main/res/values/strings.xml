@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">RxMVP with Dagger</string>
+    <string name="click_me">Click me</string>
 </resources>

@@ -1,4 +1,4 @@
-package nikhil.bhople.rxmvpwithdagger.activities.mvp;
+package nikhil.bhople.rxmvpwithdagger.activities.mvp.ext;
 
 import android.os.Parcel;
 import android.os.Parcelable;
@@ -31,7 +31,7 @@ public class RecipeModel implements Parcelable
 
     };
 
-    protected RecipeModel(Parcel in) {
+    private RecipeModel(Parcel in) {
         in.readList(this.results, (Result.class.getClassLoader()));
     }
 

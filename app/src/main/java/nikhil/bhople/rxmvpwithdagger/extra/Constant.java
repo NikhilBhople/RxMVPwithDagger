@@ -5,5 +5,5 @@ package nikhil.bhople.rxmvpwithdagger.extra;
  */
 
 public class Constant {
-    public static final String Base_Url = "www.github.com";
+    public static final String Base_Url = "http://www.recipepuppy.com";
 }

@@ -1,4 +1,4 @@
-package nikhil.bhople.rxmvpwithdagger.activities.mvp;
+package nikhil.bhople.rxmvpwithdagger.activities.mvp.ext;
 
 import android.os.Parcel;
 import android.os.Parcelable;
@@ -40,7 +40,7 @@ public class Result implements Parcelable
     }
             ;
 
-    protected Result(Parcel in) {
+    private Result(Parcel in) {
         this.title = ((String) in.readValue((String.class.getClassLoader())));
         this.href = ((String) in.readValue((String.class.getClassLoader())));
         this.ingredients = ((String) in.readValue((String.class.getClassLoader())));
@@ -58,7 +58,7 @@ public class Result implements Parcelable
         this.title = title;
     }
 
-    public String getHref() {
+    String getHref() {
         return href;
     }
 
@@ -66,7 +66,7 @@ public class Result implements Parcelable
         this.href = href;
     }
 
-    public String getIngredients() {
+    String getIngredients() {
         return ingredients;
     }
 
@@ -74,7 +74,7 @@ public class Result implements Parcelable
         this.ingredients = ingredients;
     }
 
-    public String getThumbnail() {
+    String getThumbnail() {
         return thumbnail;
     }
 
