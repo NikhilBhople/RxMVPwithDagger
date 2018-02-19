@@ -6,6 +6,7 @@ import android.support.annotation.NonNull;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.FrameLayout;
 import android.widget.Toast;
 
@@ -27,6 +28,7 @@ public class MainActivityView extends FrameLayout {
     private Button btn_search;
     private ProgressDialog progressDialog;
     private RecyclerView recyclerView;
+    private EditText edtSearch;
 
 
     public MainActivityView(@NonNull Activity context) {
@@ -36,6 +38,7 @@ public class MainActivityView extends FrameLayout {
 
         btn_search = findViewById(R.id.btn_search);
         recyclerView = findViewById(R.id.recyclerview);
+        edtSearch = findViewById(R.id.edt_query);
 
         progressDialog = new ProgressDialog(getContext());
         progressDialog.setMessage("Please wait...");
@@ -68,5 +71,9 @@ public class MainActivityView extends FrameLayout {
             recyclerView.setAdapter(new RecyclerviewAdapter(getContext(),results,picasso));
 
         }
+    }
+
+    public String getSearchString() {
+        return edtSearch.getText().toString();
     }
 }
